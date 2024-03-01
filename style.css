@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('icon/computer-keyboards-wallpaper-preview-3151956148.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid #000;
+    text-align: center;
+    max-width: 400px; /* Changed min-width to max-width */
+    width: 90%; /* Added */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Center the container */
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0;
+    display: block;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000;
+    background-color: transparent;
+    font-weight: 500;
+}
+
+input::placeholder {
+    color: #222;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Changed flex-direction to column for smaller screens */
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: 500;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+textarea {
+    resize: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .buttons {
+        flex-direction: row; /* Change back to row for smaller screens */
+    }
+
+    button {
+        width: auto; /* Let button width be auto for smaller screens */
+    }
+}
